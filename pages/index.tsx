@@ -1,9 +1,16 @@
 import type { NextPage } from "next";
+import { Header, Navbar } from "../components";
 
-type Props = {};
-
-const Home: NextPage = (props: Props) => {
-  return <div>Home</div>;
+const Home: NextPage = () => {
+  return (
+    <>
+      {/* HEADER */}
+      <Header />
+      {/* NAV */}
+      <Navbar />
+      {/* MAIN */}
+    </>
+  );
 };
 
 export default Home;
