@@ -6,7 +6,7 @@ const Home: NextPage = () => {
     <>
       {/* HEADER */}
       <Header />
-      {/* NAV */}
+      {/* NAVBAR */}
       <Navbar />
       {/* MAIN */}
     </>

@@ -12,7 +12,7 @@ const Layout: NextPage<Props> = ({ children }) => {
       <Head>
         <title>Hulu</title>
       </Head>
-      <main>{children}</main>
+      <div>{children}</div>
     </>
   );
 };
