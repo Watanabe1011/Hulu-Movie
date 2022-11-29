@@ -9,7 +9,7 @@ type Props = {
 const Main: NextPage<Props> = ({ results }) => {
   return (
     <main>
-      {results.map((result) => (
+      {results.map((result : Result) => (
         <Thumbnail key={result?.id} result={result} />
       ))}
     </main>
