@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
-import { Header, Navbar } from "../components";
+import { GetServerSideProps } from "next";
+import { Header, Main, Navbar } from "../components";
 
 const Home: NextPage = () => {
   return (
@@ -9,8 +10,19 @@ const Home: NextPage = () => {
       {/* NAVBAR */}
       <Navbar />
       {/* MAIN */}
+      <Main />
     </>
   );
 };
 
 export default Home;
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const genre = context.query.genre;
+
+  console.log(genre)
+
+  return {
+    props: {},
+  };
+};
