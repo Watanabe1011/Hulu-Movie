@@ -11,6 +11,8 @@ type Props = {
 const Thumbnail: NextPage<Props> = forwardRef(({ result }, ref) => {
   const BASE_URL = "https://image.tmdb.org/t/p/original/";
 
+  console.log(result)
+
   return (
     <div
       ref={ref}
