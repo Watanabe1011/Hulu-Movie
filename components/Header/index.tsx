@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Image from "next/image";
-import { headerItems } from "./hooks";
+import { headerItems } from "./imports";
 
 type HeroIcon = (props: React.ComponentProps<"svg">) => JSX.Element;
 
