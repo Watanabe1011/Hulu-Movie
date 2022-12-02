@@ -25,4 +25,39 @@ export interface Result {
   original_name?: string;
   first_air_date?: string;
   origin_country?: string[];
+  belongs_to_collection?: any;
+  budget: number;
+  genres: Genre[];
+  homepage: string;
+  production_companies: Productioncompany[];
+  production_countries: Productioncountry[];
+  revenue: number;
+  runtime: number;
+  spoken_languages: Spokenlanguage[];
+  status: string;
+  tagline: string;
+  success: boolean;
+}
+
+export interface Spokenlanguage {
+  english_name: string;
+  iso_639_1: string;
+  name: string;
+}
+
+export interface Productioncountry {
+  iso_3166_1: string;
+  name: string;
+}
+
+export interface Productioncompany {
+  id: number;
+  logo_path?: string;
+  name: string;
+  origin_country: string;
+}
+
+export interface Genre {
+  id: number;
+  name: string;
 }
