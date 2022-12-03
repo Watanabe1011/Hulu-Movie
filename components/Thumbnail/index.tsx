@@ -8,7 +8,7 @@ import { Result } from "../../utils/interface/movieInterface";
 type Props = {
   result: Result;
 };
-
+// eslint-disable-next-line react/display-name
 const Thumbnail: NextPage<Props> = forwardRef(({ result }, ref: any) => {
   const BASE_URL = "https://image.tmdb.org/t/p/original/";
 
