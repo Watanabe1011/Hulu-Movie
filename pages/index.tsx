@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import { GetServerSideProps } from "next";
 import { Header, Main, Navbar } from "../components";
 import { Result } from "../utils/interface/movieInterface";
-import requests from "../utils/requests";
+import requests, { fetchRequest } from "../utils/requests";
 
 type Props = {
   results: Result[];
@@ -26,10 +26,10 @@ export default Home;
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const genre = context.query?.genre;
 
+  const req = fetchRequest.find((req) => req.fetchRequest === genre);
+
   const request = await fetch(
-    `https://api.themoviedb.org/3${
-      requests[genre]?.url || requests.fetchTrending.url
-    }`
+    `https://api.themoviedb.org/3${req?.url || requests.fetchTrending.url}`
   );
   const data = await request.json();
 
