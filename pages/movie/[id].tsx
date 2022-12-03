@@ -49,7 +49,7 @@ const MovieDetails: NextPage<Props> = ({ movieData, backdropPath }) => {
         <div className="pb-10">
           <div className="relative w-full h-96 sm:h-[480px] group">
             <ArrowLeftIcon
-              className="h-10 w-10 absolute left-3 top-2 z-[100] cursor-pointer transition duration-500 ease-in-out hover:scale-125 rounded"
+              className="h-14 w-14 absolute left-3 top-2 z-[100] cursor-pointer transition duration-500 ease-in-out hover:scale-125 rounded"
               onClick={() => router.push("/")}
             />
 
@@ -68,7 +68,7 @@ const MovieDetails: NextPage<Props> = ({ movieData, backdropPath }) => {
             >
               <a href={movieData.homepage} target="blank">
                 <div className="flex items-center justify-center h-full">
-                  <h2 className="sm:text-4xl text-white font-bold">
+                  <h2 className="sm:text-4xl text-white font-semibold">
                     See more details
                   </h2>
                 </div>
@@ -80,11 +80,28 @@ const MovieDetails: NextPage<Props> = ({ movieData, backdropPath }) => {
             <h2 className="mb-4 text-lg sm:text-2xl md:text-4xl text-white font-bold">
               {movieData.title || movieData.original_name}
             </h2>
-            <p className="leading-6 md:leading-7 mb-2 lg:text-lg">{movieData.overview}</p>
-            <p className="flex items-center capitalize text-sm sm:text-base">
-              {movieData.media_type && `${movieData.media_type}`}{" "}
-              {movieData.release_date || movieData.first_air_date}
-              <ThumbUpIcon className="h-5 mx-2" /> {movieData.vote_count}
+            <p className="leading-6 md:leading-7 mb-2 lg:text-lg">
+              {movieData.overview}
+            </p>
+            <div className="flex items-center gap-2">
+              <p className="text-white">Release Date</p>{" "}
+              <p className="flex items-center capitalize text-sm sm:text-base text-blue-300">
+                {movieData.media_type && `${movieData.media_type}`}{" "}
+                {movieData.release_date || movieData.first_air_date}
+                <ThumbUpIcon className="h-5 mx-2" /> {movieData.vote_count}
+              </p>
+            </div>
+            <p className="mt-1">
+              Status:{" "}
+              <span
+                className={`${
+                  movieData.status === "Released"
+                    ? `text-green-400`
+                    : "text-white"
+                }`}
+              >
+                {movieData.status}
+              </span>
             </p>
 
             {/* GENRES */}

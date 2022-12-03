@@ -7,3 +7,18 @@
     @apply bg-[#06202A] text-gray-300;
   }
 }
+
+/* SCROLL */
+body::-webkit-scrollbar {
+  width: 1rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #e0e0e0;
+  border-radius: 0.5rem;
+  border: 0.25rem solid rgb(6, 11, 40);
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(6, 11, 40);
+}
