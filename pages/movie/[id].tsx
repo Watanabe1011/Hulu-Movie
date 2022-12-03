@@ -113,7 +113,10 @@ const MovieDetails: NextPage<Props> = ({ movieData, backdropPath }) => {
             <div className="flex items-center flex-wrap gap-3 mb-3">
               {movieData.genres &&
                 movieData.genres.map((genre) => (
-                  <p className="bg-gray-700 text-white mt-1 rounded p-3">
+                  <p
+                    key={genre.id}
+                    className="bg-gray-700 text-white mt-1 rounded p-3"
+                  >
                     {genre.name}
                   </p>
                 ))}
@@ -128,7 +131,7 @@ const MovieDetails: NextPage<Props> = ({ movieData, backdropPath }) => {
             <div className="flex flex-wrap gap-3 mb-3">
               {movieData.spoken_languages &&
                 movieData.spoken_languages.map((spoke) => (
-                  <div className="flex h-full">
+                  <div className="flex h-full" key={spoke.iso_639_1}>
                     <p className="bg-gray-700 text-white mt-1 rounded p-3 flex items-center">
                       {spoke.english_name}
                     </p>
@@ -152,7 +155,7 @@ const MovieDetails: NextPage<Props> = ({ movieData, backdropPath }) => {
             <div className="flex flex-wrap gap-3 mb-3">
               {movieData.production_companies &&
                 movieData.production_companies.map((prod) => (
-                  <div className="flex h-full">
+                  <div className="flex h-full" key={prod.id}>
                     <p className="bg-gray-700 text-white mt-1 rounded p-3 flex items-center">
                       {prod.name}
                     </p>
@@ -175,7 +178,7 @@ const MovieDetails: NextPage<Props> = ({ movieData, backdropPath }) => {
             <div className="flex flex-wrap gap-3 mb-3">
               {movieData.production_countries &&
                 movieData.production_countries.map((prod) => (
-                  <div className="flex h-full">
+                  <div className="flex h-full" key={prod.iso_3166_1}>
                     <p className="bg-gray-700 text-white mt-1 rounded p-3 flex items-center">
                       {prod.name}
                     </p>
