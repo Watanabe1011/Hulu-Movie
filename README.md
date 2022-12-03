@@ -11,7 +11,7 @@ Hulu v2 is a Hulu clone application where you can see list of trending movies di
 
 ### Screenshot
 
-![](./screenshots/hulu-photo.png)
+![](./screenshots/hulu-photo.jpg)
 
 ### Links
 
