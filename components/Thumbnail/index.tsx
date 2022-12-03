@@ -9,7 +9,7 @@ type Props = {
   result: Result;
 };
 
-const Thumbnail: NextPage<Props> = forwardRef(({ result }, ref) => {
+const Thumbnail: NextPage<Props> = forwardRef(({ result }, ref: any) => {
   const BASE_URL = "https://image.tmdb.org/t/p/original/";
 
   return (
